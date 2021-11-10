@@ -13,3 +13,7 @@ https://www.pwc.com/gx/en/audit-services/ifrs/publications/ifrs-9/ifrs-9-underst
 ML algorithm
 
 https://dev.to/omrigm/run-machine-learning-models-in-your-browser-with-tensorflow-js-reactjs-48pe
+
+# Resources
+
+[Testnet](https://developer.algorand.org/docs/get-details/algorand-networks/testnet/)
