@@ -10,9 +10,16 @@ Instead of the broker in this instance there is an automatic system that takes t
 https://www.pwc.com/gx/en/audit-services/ifrs/publications/ifrs-9/ifrs-9-understanding-the-basics.pdf
 
 # Ideas to implement
-ML algorithm
+
+* Minting of NFTs / Tokens
+
+* ML algorithm
 
 https://dev.to/omrigm/run-machine-learning-models-in-your-browser-with-tensorflow-js-reactjs-48pe
+
+* Algorand Indexer
+
+[Developer Office Hours | Algorand Indexer](https://www.youtube.com/watch?v=m8gooZ_VDeY)
 
 # Resources
 
