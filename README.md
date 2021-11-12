@@ -23,6 +23,10 @@ https://dev.to/omrigm/run-machine-learning-models-in-your-browser-with-tensorflo
 
 # Resources
 
+[Modes of Use](https://developer.algorand.org/docs/get-details/dapps/smart-contracts/smartsigs/modes/)
+
+[Atomic Transfers](https://developer.algorand.org/docs/get-details/atomic_transfers/)
+
 [Testnet](https://developer.algorand.org/docs/get-details/algorand-networks/testnet/)
 
 [Testnet Faucet](https://bank.testnet.algorand.network/)
@@ -33,3 +37,6 @@ https://dev.to/omrigm/run-machine-learning-models-in-your-browser-with-tensorflo
 [Tutorial: Adding Transaction Capabilities to a dApp Using AlgoSigner](https://developer.algorand.org/tutorials/adding-transaction-capabilities-dapp-using-algosigner/)
 
 [Purestak Code samples](https://developer.purestake.io/code-samples)
+
+
+[Python Examples](https://github.com/algorandfoundation/buildweb3)
