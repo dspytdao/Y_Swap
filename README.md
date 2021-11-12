@@ -29,4 +29,5 @@ https://dev.to/omrigm/run-machine-learning-models-in-your-browser-with-tensorflo
 
 [AlgoSigner](https://github.com/PureStake/algosigner)
 
-[Examples using AlgoSigner](https://purestake.github.io/algosigner-dapp-example/)
+[Examples using AlgoSigner:  Web App](https://purestake.github.io/algosigner-dapp-example/)  
+[Tutorial: Adding Transaction Capabilities to a dApp Using AlgoSigner](https://developer.algorand.org/tutorials/adding-transaction-capabilities-dapp-using-algosigner/)
