@@ -24,3 +24,9 @@ https://dev.to/omrigm/run-machine-learning-models-in-your-browser-with-tensorflo
 # Resources
 
 [Testnet](https://developer.algorand.org/docs/get-details/algorand-networks/testnet/)
+
+[Testnet Faucet](https://bank.testnet.algorand.network/)
+
+[AlgoSigner](https://github.com/PureStake/algosigner)
+
+[Examples using AlgoSigner](https://purestake.github.io/algosigner-dapp-example/)
