@@ -40,3 +40,5 @@ https://dev.to/omrigm/run-machine-learning-models-in-your-browser-with-tensorflo
 
 
 [Python Examples](https://github.com/algorandfoundation/buildweb3)
+
+[Algorand Partner Training | Overview of Stateful and Stateless Smart Contracts](https://www.youtube.com/watch?v=9EpGKexKeMk)
