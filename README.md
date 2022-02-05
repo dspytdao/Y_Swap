@@ -1,26 +1,41 @@
 ## Overview
 
-In this article we are going to lay the groundwork for a series of articles dedicated to machine learning and implementation of financial instruments with the help of the Algorand ecosystem.
+In this article we build an interface to Algorand with AlgoSigner Wallet.
 
-First, we are going to set up a project in React JS and connect AlgoSigner to the Application. Next, we connect an Indexer to our application by using testnet API from PureStake.Besides, we provide a plan to extend the application to an ML model and combination of smart contracts to implement a version of a decentralized exchange
+Make a value proposition for Algroand Ecosystem to consider Machine Learning.
 
-## Grand Plan for the Project
+First, we are going to set up a project in React JS and connect AlgoSigner to the Application. 
 
-As a grand plan we intend to build an application that would also access data to assist users in issuing standard and more exotic financial instruments.
+Next, we connect an Indexer to our application by using testnet API from PureStake. 
 
-We propose to use Indexer data to assess the credibility of the issuer. For instance, we would use the transaction and balance history as a substitute for Cash Flow, Income statement and a Balance Sheet.
-
-In addition, Liquid and valuable NFTs are a great collateral for options and debt obligations. Machine Learning models have further potential to enhance the precision of the pricing and viability of certain instruments such as [revenue swaps](https://www.pwc.com/gx/en/audit-services/ifrs/publications/ifrs-9/ifrs-9-understanding-the-basics.pdf).
+Besides, we provide a roadmap to extend the application to an ML model with the combination of smart contracts to implement a version of a on-chain exchange.
 
 ### Algorand Layer 1 Capabilities
 
-One of the greatest benefits of building a project on Algorand are its Layer 1 capabilities. 
+One of the greatest benefits of building a project on Algorand are its Layer 1 capabilities and payment patterns. 
 
-We can bundle transactions in [atomic swaps](https://developer.algorand.org/docs/get-details/atomic_transfers/) where each transaction relies on each other. Which is particularly important for decentralized exchange services since it improves security and transaction costs.
+Algorand enables bundling of transactions in [atomic swaps](https://developer.algorand.org/docs/get-details/atomic_transfers/) where each transaction relies on each other. 
+Which is particularly important since it emphasises security and low transaction costs.
 
-Another Layer 1 capability are [smart signatures](https://developer.algorand.org/docs/get-details/dapps/smart-contracts/#smart-signatures) that are used for signature delegation. This feature has potential to significantly automate the control of the escrow account. 
+Besides, another Layer 1 capability is [smart signatures](https://developer.algorand.org/docs/get-details/dapps/smart-contracts/#smart-signatures) that are used for signature delegation. This feature significantly improves the control of an escrow account, a third-party smart contract which holds tokens until the payment conditions are satisfied.
 
-Finally, we can build smart contract on Algorand using only Python and [PyTeal](https://github.com/algorand/pyteal) Library.
+Finally, we can build smart contract on Algorand using Python and [PyTeal](https://github.com/algorand/pyteal) Library.
+
+## Value Proposition
+
+The Algorand protocol supports the creation of on-chain assets that benefit from the same security, compatibility, speed and ease of use as the Algo. The official name for assets on Algorand is Algorand Standard Assets (ASA).
+
+With Algorand Standard Assets you can represent stablecoins, loyalty points, system credits, and in-game points, just to name a few examples. You can also represent single, unique assets like a deed for a house, collectable items, unique parts on a supply chain, etc. There is also optional functionality to place transfer restrictions on an asset that help support securities, compliance, and certification use cases.
+
+Info
+
+We consider Indexer data to assess the credibility of the issuer.
+
+For instance, we would use the transaction and balance history.
+
+In addition, Liquid and valuable NFTs are a great collateral for options and debt obligations. Machine Learning models have further potential to enhance the precision of the pricing and viability
+
+
 
 ## React
 
@@ -35,7 +50,7 @@ To work with algorand we need algosdk dependency and to make our life easier wit
 
 ### First Step: implementing AlgoSigner Wallet
 
-Currently we are working in App.js,where we are implementing a connection to AlgoSigner:
+Currently we are working in App.js, where we are implementing a connection to [AlgoSigner](https://github.com/PureStake/algosigner):
 
 
 ```javascript
@@ -113,7 +128,7 @@ export default App;
 To connect to the testnet we are using purestake.io API to access the indexer. We add following lines in our file as well as a function to get the timestamp of the block :
 
 
-```
+```javascript
 import algosdk from 'algosdk';
 
 const baseServer = "https://testnet-algorand.api.purestake.io/idx2";
@@ -126,7 +141,7 @@ let indexerClient = new algosdk.Indexer(token, baseServer, port);
 ```
 
 
-```
+```javascript
 const GetBlocks = () => {
   const action = useCallback(async () => {
 
@@ -141,7 +156,7 @@ const GetBlocks = () => {
 
 Combined the code the file loos as following:
 
-```
+```javascript
 /* global AlgoSigner */
 import './App.css';
 import {Button, Container, Header, Message} from "semantic-ui-react";
@@ -253,8 +268,6 @@ Another potential obstacle is serving smart contracts on the fly. A viable solut
 [Algorand Testnet](https://developer.algorand.org/docs/get-details/algorand-networks/testnet/)
 
 [Testnet Faucet](https://bank.testnet.algorand.network/)
-
-[AlgoSigner](https://github.com/PureStake/algosigner)
 
 [Examples using AlgoSigner:  Web App](https://purestake.github.io/algosigner-dapp-example/)
 
