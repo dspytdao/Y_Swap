@@ -17,9 +17,10 @@ One of the greatest benefits of building a project on Algorand are its Layer 1 c
 Algorand enables bundling of transactions in [atomic swaps](https://developer.algorand.org/docs/get-details/atomic_transfers/) where each transaction relies on each other. 
 Which is particularly important since it emphasises security and low transaction costs.
 
-Besides, another Layer 1 capability is [smart signatures](https://developer.algorand.org/docs/get-details/dapps/smart-contracts/#smart-signatures) that are used for signature delegation. This feature significantly improves the control of an escrow account, a third-party smart contract which holds tokens until the payment conditions are satisfied.
+Besides, another Layer 1 capability is [smart signatures](https://developer.algorand.org/docs/get-details/dapps/smart-contracts/#smart-signatures) that are used for signature delegation. This feature significantly raises the bar for the control of an escrow account, a third-party smart contract which holds tokens until the payment conditions are satisfied.
 
-Finally, we can build smart contract on Algorand using Python and [PyTeal](https://github.com/algorand/pyteal) Library.
+Furthermore, we can build smart contracts on Algorand using Python and [PyTeal](https://github.com/algorand/pyteal) Library. Here is the Github repository that walkthoughs the creation of your first Algorand accounts, creation and distribute your first asset or token on the Algorand blockchain, trading your token "atomically" without any third party and obtaining your smartignature (aka stateless smart contract).
+
 
 ## Value Proposition
 
@@ -274,8 +275,6 @@ Another potential obstacle is serving smart contracts on the fly. A viable solut
 [Tutorial: Adding Transaction Capabilities to a dApp Using AlgoSigner](https://developer.algorand.org/tutorials/adding-transaction-capabilities-dapp-using-algosigner/)
 
 [Purestake Code samples](https://developer.purestake.io/code-samples)
-
-[Python Examples](https://github.com/algorandfoundation/buildweb3)
 
 [Algorand Partner Training | Overview of Stateful and Stateless Smart Contracts](https://www.youtube.com/watch?v=9EpGKexKeMk)
 
