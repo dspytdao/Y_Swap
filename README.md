@@ -1,10 +1,8 @@
 ## Overview
 
-In this article we build an interface to Algorand with AlgoSigner Wallet.
+In this article we make a value proposition for Algorand Ecosystem to consider Machine Learning coupled with an Indexer.
 
-Make a value proposition for Algroand Ecosystem to consider Machine Learning.
-
-First, we are going to set up a project in React JS and connect AlgoSigner to the Application. 
+First, we build an interface to Algorand with AlgoSigner Wallet in React
 
 Next, we connect an Indexer to our application by using testnet API from PureStake. 
 
@@ -16,7 +14,7 @@ One of the greatest benefits of building a project on Algorand are its Layer 1 c
 
 The Algorand protocol supports the creation of on-chain assets that benefit from the same security, compatibility, speed and ease of use as the Algo. The official name for assets on Algorand is Algorand Standard Assets (ASA).
 
-Developers and organizations can reprsent stablecoins, loyalty points, system credits, and in-game points with Algorand Standard Assets.
+Developers and organizations can represent stablecoins, loyalty points, system credits, and in-game points with Algorand Standard Assets.
 Meanhwhile an optional functionality to place transfer restrictions on an asset helps support more complex use cases such as securities, compliance, and certification.
 
 Algorand enables bundling of transactions in [atomic swaps](https://developer.algorand.org/docs/get-details/atomic_transfers/) where each transaction relies on each other. 
@@ -44,6 +42,8 @@ Data-driven approach to analysis, monitoring, and controlling phases assist in a
 Data-driven approaches make use of data not only for process discovery or analysis, but also in monitoring to gain predictive insights.
 Data utilisation has moved from only offline mode, to runtime phases such as monitoring, where data is used in real-time to forecast process behavior, performance, and outcomes.
 In general, process outcomes reflect the quality of a result delivered to actors involved in a process.
+
+Predictive process monitoring at runtime is especially growing in importance. Predicting the remaining cycle time, compliance, sequence of process activities, the final or partial outcome, or the prioritization of processes helps organizations to make decisions and gain valuable insights in a rapidly evolving environment.
 
 A convergence of breakthrough technologies in big data and data analytics provide a critical solution to meet organization objectives. Big data and advanced analytics play a key role in raising productivity of knowledge-intensive tasks, maximizing assets, and facilitating personalized digital experience.
 
@@ -258,18 +258,15 @@ const App = () => {
 export default App;
 ```
 
-### Potential use cases
+### Roadmap
 
-We consider Indexer data to assess the credibility of the issuer.
+We consider to process and store Algorand Blockchain data in PostgreSQL, for instance, to assess the credibility of the users.
+![image](https://user-images.githubusercontent.com/66903336/152650816-53ea89b4-b8f3-4012-9da0-be851256726f.png)
 
-For instance, we would use the transaction and balance history.
+For instance, we could use the transaction and balance history to implement the trust score.
 
-Machine Learning models have further potential to enhance the precision of the pricing and viability
+Next, we collect the data that is clean and regularized, designed to be usable right away to train the models.
 
-We can host a machine learning model using Python and Flask as written in [this Medium article](https://towardsdatascience.com/create-a-complete-machine-learning-web-application-using-react-and-flask-859340bddb33). Otherwise, we can train and host an ML model directly in React by using [tensorflow.js](https://dev.to/omrigm/run-machine-learning-models-in-your-browser-with-tensorflow-js-reactjs-48pe).
+Besides, we intend tio host a machine learning model using React and Flask. However, we have not decided yet whtehr it is more beneficia to train and host an machine learning model directly in React by using [tensorflow.js](https://www.tensorflow.org/js).
 
-Ideally, this model should connect to an indexer data in real time and feed the data to an algorithm that would estimate the probability of an event such as default and predict the future price of the asset. 
-
-In case the model is served using Flask the API should securely connect the model and the output of the model to prevent bad actors from cheating.
-
-Another potential obstacle is serving smart contracts on the fly. A viable solution to connecting counter parties would be standardizing the contracts and educating the users about its potential risks. Auditing these contracts is also a significant concern.
+Ideally, as the final product this model would connect to an indexer data in real time and feed the data to an algorithm that would estimate the probability of an event such as sale and predict the future price movements of an asset. 
