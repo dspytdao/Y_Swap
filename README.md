@@ -258,16 +258,13 @@ const App = () => {
 export default App;
 ```
 
-
-## Further Use Case
+### Potential use cases
 
 We consider Indexer data to assess the credibility of the issuer.
 
 For instance, we would use the transaction and balance history.
 
-In addition, Liquid and valuable NFTs are a great collateral for options and debt obligations. Machine Learning models have further potential to enhance the precision of the pricing and viability
-
-### Further Action
+Machine Learning models have further potential to enhance the precision of the pricing and viability
 
 We can host a machine learning model using Python and Flask as written in [this Medium article](https://towardsdatascience.com/create-a-complete-machine-learning-web-application-using-react-and-flask-859340bddb33). Otherwise, we can train and host an ML model directly in React by using [tensorflow.js](https://dev.to/omrigm/run-machine-learning-models-in-your-browser-with-tensorflow-js-reactjs-48pe).
 
@@ -276,19 +273,3 @@ Ideally, this model should connect to an indexer data in real time and feed the 
 In case the model is served using Flask the API should securely connect the model and the output of the model to prevent bad actors from cheating.
 
 Another potential obstacle is serving smart contracts on the fly. A viable solution to connecting counter parties would be standardizing the contracts and educating the users about its potential risks. Auditing these contracts is also a significant concern.
-
-## Further Resources
-
-[Algorand Testnet](https://developer.algorand.org/docs/get-details/algorand-networks/testnet/)
-
-[Testnet Faucet](https://bank.testnet.algorand.network/)
-
-[Examples using AlgoSigner:  Web App](https://purestake.github.io/algosigner-dapp-example/)
-
-[Tutorial: Adding Transaction Capabilities to a dApp Using AlgoSigner](https://developer.algorand.org/tutorials/adding-transaction-capabilities-dapp-using-algosigner/)
-
-[Purestake Code samples](https://developer.purestake.io/code-samples)
-
-[Algorand Partner Training | Overview of Stateful and Stateless Smart Contracts](https://www.youtube.com/watch?v=9EpGKexKeMk)
-
-[Using VUE.JS and Reach](https://developer.algorand.org/tutorials/using-vuejs-and-reach/)
