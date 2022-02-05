@@ -1,12 +1,12 @@
 ## Overview
 
-In this article we make a value proposition for Algorand Ecosystem to consider Machine Learning coupled with an Indexer.
+In this article we make a value proposition for Algorand Ecosystem to consider benefits of Machine Learning coupled with an Indexer.
 
 First, we build an interface to Algorand with AlgoSigner Wallet in React
 
 Next, we connect an Indexer to our application by using testnet API from PureStake. 
 
-Besides, we provide a roadmap to extend the application to an ML model with the combination of smart contracts to implement a version of a on-chain exchange.
+Finally, we provide a roadmap to extend the application to an ML model with the combination of smart contracts to implement a version of a on-chain exchange.
 
 ### Algorand Layer 1 Capabilities
 
