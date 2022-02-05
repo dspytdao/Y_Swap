@@ -12,31 +12,40 @@ Besides, we provide a roadmap to extend the application to an ML model with the 
 
 ### Algorand Layer 1 Capabilities
 
-One of the greatest benefits of building a project on Algorand are its Layer 1 capabilities and payment patterns. 
+One of the greatest benefits of building a project on Algorand are its Layer 1 capabilities and payment patterns.
+
+The Algorand protocol supports the creation of on-chain assets that benefit from the same security, compatibility, speed and ease of use as the Algo. The official name for assets on Algorand is Algorand Standard Assets (ASA).
+
+Developers and organizations can reprsent stablecoins, loyalty points, system credits, and in-game points with Algorand Standard Assets.
+Meanhwhile an optional functionality to place transfer restrictions on an asset helps support more complex use cases such as securities, compliance, and certification.
 
 Algorand enables bundling of transactions in [atomic swaps](https://developer.algorand.org/docs/get-details/atomic_transfers/) where each transaction relies on each other. 
 Which is particularly important since it emphasises security and low transaction costs.
 
 Besides, another Layer 1 capability is [smart signatures](https://developer.algorand.org/docs/get-details/dapps/smart-contracts/#smart-signatures) that are used for signature delegation. This feature significantly raises the bar for the control of an escrow account, a third-party smart contract which holds tokens until the payment conditions are satisfied.
 
-Furthermore, we can build smart contracts on Algorand using Python and [PyTeal](https://github.com/algorand/pyteal) Library. Here is the Github repository that walkthoughs the creation of your first Algorand accounts, creation and distribute your first asset or token on the Algorand blockchain, trading your token "atomically" without any third party and obtaining your smartignature (aka stateless smart contract).
+We can build smart contracts on Algorand using Python and [PyTeal](https://github.com/algorand/pyteal) Library. Here is the Github repository that walkthoughs the creation of your first Algorand accounts, creation and distribute your first asset or token on the Algorand blockchain, trading your token "atomically" without any third party and obtaining 
+asset with the help of smart signature (stateless smart contract).
 
+Finally, we can search the Algorand Blockchain using the [Indexer](https://developer.algorand.org/docs/get-details/indexer/).
+The Indexer provides a set of REST API calls for searching blockchain Transactions, Accounts, Assets and Blocks with refined searches. 
 
-## Value Proposition
+![image](https://user-images.githubusercontent.com/66903336/152649700-cde7103e-d2c6-4026-bc86-98e3d7c01d22.png)
 
-The Algorand protocol supports the creation of on-chain assets that benefit from the same security, compatibility, speed and ease of use as the Algo. The official name for assets on Algorand is Algorand Standard Assets (ASA).
+The latest Algorand native SDKs (Python, JavaScript, Go, and Java) provide similar functionality. These REST calls are based on the Open API specification and are described in the REST SDK reference documentation. 
+[Developer Office Hours on Algorand Indexer](https://www.youtube.com/watch?v=m8gooZ_VDeY) provides practical overview for the developers.
 
-With Algorand Standard Assets you can represent stablecoins, loyalty points, system credits, and in-game points, just to name a few examples. You can also represent single, unique assets like a deed for a house, collectable items, unique parts on a supply chain, etc. There is also optional functionality to place transfer restrictions on an asset that help support securities, compliance, and certification use cases.
+## Big Data and Analytics
 
-Info
+The Business Process Management (BPM) is the science and practice of overseeing work to ensure consistent outcomes and to leverage opportunities for process improvement. BPM activities are commonly organized along lifecycle phases: identification, discovery, analysis, improvement, implementation, monitoring, and controlling.
 
-We consider Indexer data to assess the credibility of the issuer.
+Data-driven approach to analysis, monitoring, and controlling phases assist in aalysis and monitoring of running processes. Organization leaders and key members can determine how well they are performing on core objectives and performance metrics. Furthermore, collected data and estimations serve as vital inputs for community architecture and pipelines during the redesign phase.
 
-For instance, we would use the transaction and balance history.
+Data-driven approaches make use of data not only for process discovery or analysis, but also in monitoring to gain predictive insights.
+Data utilisation has moved from only offline mode, to runtime phases such as monitoring, where data is used in real-time to forecast process behavior, performance, and outcomes.
+In general, process outcomes reflect the quality of a result delivered to actors involved in a process.
 
-In addition, Liquid and valuable NFTs are a great collateral for options and debt obligations. Machine Learning models have further potential to enhance the precision of the pricing and viability
-
-
+A convergence of breakthrough technologies in big data and data analytics provide a critical solution to meet organization objectives. Big data and advanced analytics play a key role in raising productivity of knowledge-intensive tasks, maximizing assets, and facilitating personalized digital experience.
 
 ## React
 
@@ -250,6 +259,14 @@ export default App;
 ```
 
 
+## Further Use Case
+
+We consider Indexer data to assess the credibility of the issuer.
+
+For instance, we would use the transaction and balance history.
+
+In addition, Liquid and valuable NFTs are a great collateral for options and debt obligations. Machine Learning models have further potential to enhance the precision of the pricing and viability
+
 ### Further Action
 
 We can host a machine learning model using Python and Flask as written in [this Medium article](https://towardsdatascience.com/create-a-complete-machine-learning-web-application-using-react-and-flask-859340bddb33). Otherwise, we can train and host an ML model directly in React by using [tensorflow.js](https://dev.to/omrigm/run-machine-learning-models-in-your-browser-with-tensorflow-js-reactjs-48pe).
@@ -261,10 +278,6 @@ In case the model is served using Flask the API should securely connect the mode
 Another potential obstacle is serving smart contracts on the fly. A viable solution to connecting counter parties would be standardizing the contracts and educating the users about its potential risks. Auditing these contracts is also a significant concern.
 
 ## Further Resources
-
-[Developer Office Hours | Algorand Indexer](https://www.youtube.com/watch?v=m8gooZ_VDeY)
-
-[Smart Contracts: Modes of Use](https://developer.algorand.org/docs/get-details/dapps/smart-contracts/smartsigs/modes/)
 
 [Algorand Testnet](https://developer.algorand.org/docs/get-details/algorand-networks/testnet/)
 
