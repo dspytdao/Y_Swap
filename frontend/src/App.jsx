@@ -1,9 +1,8 @@
 /* global AlgoSigner */
-import './App.css';
-import {Button, Container, Header, Message} from "semantic-ui-react";
 import {useState, useCallback} from "react";
 import algosdk from 'algosdk';
-
+import Navbar from "./components/navbar";
+import { motion } from "framer-motion"
 const baseServer = "https://testnet-algorand.api.purestake.io/idx2";
 const port = "";
 const token = {
@@ -21,15 +20,16 @@ const ExampleAlgoSigner = ({title, buttonText, buttonAction}) => {
   }, [buttonAction]);
 
   return (
-    <>
-      <Header as="h2" dividing>{title}</Header>
-      <Button primary={true} onClick={onClick}>{buttonText}</Button>
-      <Message>
+    <div className="my-4">
+      <h2>{title}</h2>
+      <motion.button  whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }} className="bg-blue-500 transition p-2 shadow-lg shadow-blue-500/50 text-white rounded-lg m-1" onClick={onClick}>{buttonText}</motion.button>
+      {result && (<div className="bg-emerald-500 m-2 p-1 text-gray-100 rounded-sm shadow-emerald-500/50">
         <code>
           {result}
         </code>
-      </Message>
-    </>
+      </div>)}
+    </div>
   );
 };
 
@@ -67,14 +67,16 @@ const GetBlocks = () => {
 
 }, []);
 
-  return <ExampleAlgoSigner title="Get Blocks" buttonText="Get B" buttonAction={action}/>
+  return <ExampleAlgoSigner title="Get Blocks" buttonText="Get Block" buttonAction={action}/>
 };
 
 const App = () => {
   return (
-    <Container className="App">
+    <div className="bg-gray-50 min-h-screen">
+    <Navbar/>
+    <div className="container mt-4 mx-2">
       
-      <Header as="h1" dividing>React App Using AlgoSigner</Header>
+      <h1 className="text-center">React App Using AlgoSigner</h1>
 
       <CheckAlgoSigner/>
 
@@ -82,7 +84,8 @@ const App = () => {
 
       <GetBlocks/>
 
-    </Container>
+    </div>
+    </div>
   );
 };
 
