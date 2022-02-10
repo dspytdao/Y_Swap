@@ -54,6 +54,6 @@ appTxn = future.transaction.ApplicationCreateTxn(
 sAppTxn = appTxn.sign(sk)
 txid = algod_client.send_transaction(sAppTxn)
 future.transaction.wait_for_confirmation(algod_client, txid)
-print(f"App deployed")
-print(f"https://goalseeker.purestake.io/algorand/testnet/transaction/{txid}")
+print("\x1b[32mApp deployed successfully\x1b[0m")
+print("========================================")
 print(f"https://testnet.algoexplorer.io/tx/{txid}")
