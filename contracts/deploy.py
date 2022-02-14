@@ -2,17 +2,18 @@ from algosdk import *
 from pyteal import *
 from algosdk.v2client.algod import AlgodClient
 import dex
+from dotenv import dotenv_values
 
-
+config = dotenv_values(".env")
 # Create Account
-secret_poetry = "useless client unhappy pizza canoe nation office mandate garden air minimum pyramid income bridge empower bless soldier glove human brave pencil turn idea about cannon"
+secret_poetry = config["SECRET_POETRY"]
 try:
     pk = mnemonic.to_public_key(secret_poetry)  # Public Key
     sk = mnemonic.to_private_key(secret_poetry)  # Secret Key
 except error.WrongMnemonicLengthError:
     quit(f"Invalid mnemonic. Please update your mnemonic before running.")
 
-algod_token = "4lqPPZ69GS5TOpaZQApsA2310M5aJ6gP5XawXEZV"  # Algod API Key
+algod_token = config["ALGOD_TOKEN"]  # Algod API Key
 algod_address = "https://testnet-algorand.api.purestake.io/ps2"  # Algod Node Address
 algod_header = {"X-API-Key": algod_token}
 algod_client = AlgodClient(algod_token, algod_address, algod_header)
@@ -21,7 +22,7 @@ algod_client = AlgodClient(algod_token, algod_address, algod_header)
 try:
     algod_client.status()
 except error.AlgodHTTPError:
-    quit(f"algod node connection failure. Check the host and API key are correct.")
+    quit(f"algod node connection failure\n Check if the Host and API key are correct")
 
 # compile the pyteal contract
 approval_teal = compileTeal(dex.approval(), Mode.Application, version=5)
