@@ -6,6 +6,7 @@ from algosdk.v2client import algod
 from pyteal import compileTeal, Mode
 from asset import approval_program, clear_state_program
 
+
 #DJ24DOMQY6GWI4NY6CFSQFNWREIQYTN6ABQU7DTIBY5KTGGENF3F2RSMJU
 user_mnemonic = "input manage barrel job dizzy raise engine canvas metal novel pudding observe disagree advance rapid angry alert season seek dice system acoustic phone absent butter"
 #TQSYJU6BRS4ECUTREW6WAVMRK6MR2XAOC6TKQ46QSDQLVXQJE2O3TT63AU
@@ -27,6 +28,18 @@ def get_private_key_from_mnemonic(mn):
     private_key = mnemonic.to_private_key(mn)
     return private_key
 
+
+def format_state(state):
+    formatted = {}
+    for item in state:
+        key = item["key"]
+        value = item["value"]
+        formatted_key = base64.b64decode(key).decode("utf-8")
+        if value["type"] == 1:
+            formatted[formatted_key] = value["bytes"]
+        else:
+            formatted[formatted_key] = value["uint"]
+    return formatted
 
 # helper function that waits for a given txid to be confirmed by the network
 def wait_for_confirmation(client, txid):
@@ -63,6 +76,7 @@ def create_app(
     global_schema,
     local_schema,
     app_args,
+    foreign_assets
 ):
     # define sender as creator
     sender = account.address_from_private_key(private_key)
@@ -78,14 +92,15 @@ def create_app(
 
     # create unsigned transaction
     txn = transaction.ApplicationCreateTxn(
-        sender,
-        params,
-        on_complete,
-        approval_program,
-        clear_program,
-        global_schema,
-        local_schema,
-        app_args,
+        sender = sender,
+        sp = params,
+        on_complete = on_complete,
+        approval_program = approval_program,
+        clear_program = clear_program,
+        global_schema = global_schema,
+        local_schema = local_schema,
+        app_args = app_args,
+        foreign_assets = foreign_assets
     )
 
     # sign transaction
@@ -160,26 +175,6 @@ def call_app(client, private_key, index, app_args):
 
     # await confirmation
     wait_for_confirmation(client, tx_id)
-
-
-def format_state(state):
-    formatted = {}
-    for item in state:
-        key = item["key"]
-        value = item["value"]
-        formatted_key = base64.b64decode(key).decode("utf-8")
-        if value["type"] == 1:
-            # byte string
-            if formatted_key == "voted":
-                formatted_value = base64.b64decode(value["bytes"]).decode("utf-8")
-            else:
-                formatted_value = value["bytes"]
-            formatted[formatted_key] = formatted_value
-        else:
-            # integer
-            formatted[formatted_key] = value["uint"]
-    return formatted
-
 
 # read user local state
 def read_local_state(client, addr, app_id):
@@ -305,7 +300,7 @@ def main():
     # declare application state storage (immutable)
     local_ints = 2
     local_bytes = 0
-    global_ints = (2)
+    global_ints = 2
     global_bytes = 1
     global_schema = transaction.StateSchema(global_ints, global_bytes)
     local_schema = transaction.StateSchema(local_ints, local_bytes)
@@ -341,6 +336,7 @@ def main():
         global_schema,
         local_schema,
         app_args,
+        [174]
     )
 
     # read global state of application
@@ -372,6 +368,7 @@ def main():
     global_state = read_global_state(
         algod_client, account.address_from_private_key(creator_private_key), app_id
     )
+    
     print("Global state:", global_state)
 
     # delete application
