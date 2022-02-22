@@ -13,4 +13,4 @@ Y_Swap is built with the prime objective to offer an Uniswap-like dapp for the A
 * PyTeal
 * AlgoSigner
 
-Crafted with ❤️ by [TheSlayer-666](https://github.com/TheSlayer-666)
+Crafted with ❤️ by [Grigore Gabriel Trifan](https://github.com/TheSlayer-666)
