@@ -46,7 +46,7 @@ for (i) in range(10):
     round += 10000000
 """
 
-data = algod_indexer.search_transactions(min_round=round, max_round=round+10000, asset_id=usdc)['transactions']
+data = algod_indexer.search_transactions(min_round=round, max_round=round+10000, asset_id=usdc, min_amount=1)['transactions']
 
 file = json.dumps(data)
 with open(f'json_data.json', 'w') as outfile:
