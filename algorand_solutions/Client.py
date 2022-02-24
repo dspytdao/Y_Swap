@@ -23,7 +23,7 @@ algod_indexer = IndexerClient(
 
 print(algod_indexer.health())
 
-round = 11611093
+round = 11611000
 usdc = 31566704 
 
 """
@@ -46,7 +46,7 @@ for (i) in range(10):
     round += 10000000
 """
 
-data = algod_indexer.search_transactions(min_round=round, max_round=round+10000, asset_id=usdc, min_amount=1)['transactions']
+data = algod_indexer.search_transactions(min_round=round, max_round=round+1000000, asset_id=usdc, min_amount=1, limit=11000)['transactions']
 
 file = json.dumps(data)
 with open(f'json_data.json', 'w') as outfile:
