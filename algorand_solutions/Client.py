@@ -21,35 +21,37 @@ algod_indexer = IndexerClient(
     algod_header
 )
 
+def get_data(asset_id, min_round, end_round):
+
+    reference_point = min_round
+    stride = 10000
+    while True:
+        if end_round <= reference_point:
+            break
+        data = algod_indexer.search_transactions(min_round=reference_point, max_round=reference_point+stride, asset_id=asset_id, min_amount=1, limit=10000)
+        
+        len_slice = len(data['transactions'])
+        
+        if len_slice == 10000:
+            print('Maximum slice size reached. Missing data.')
+            #add iterative function here
+            #next_token = ''
+            # while next != 'Enter correct last next-token':
+            # next_token = data['next-token']
+            break
+        else:
+
+            file = json.dumps(data['transactions'])
+
+            with open(f'data/json_data_{asset_id}_{reference_point}-{stride}.json', 'w') as outfile:
+                outfile.write(file)
+
+        reference_point+=10000
+
+
 print(algod_indexer.health())
 
-round = 11611000
-usdc = 31566704 
-
-"""
-for (i) in range(10):
-    next_token = ''
-
-    while next_token!="xx":
-        
-        nt = algod_indexer.asset_balances(asset, limit=2001,  round_num=round, next_page=next_token)
-        if 'next-token' not in nt.keys():
-            #print(len(nt['balances']))
-            next_token ='xx'
-            
-        else:
-            print(len(nt['balances']))
-            file = json.dumps(nt)
-            #with open(f'json_data_{next_token}_{block}.json', 'w') as outfile:
-            ##    outfile.write(file)
-            next_token = nt['next-token']
-    round += 10000000
-"""
-
-data = algod_indexer.search_transactions(min_round=round, max_round=round+1000000, asset_id=usdc, min_amount=1, limit=11000)['transactions']
-
-file = json.dumps(data)
-with open(f'json_data.json', 'w') as outfile:
-    outfile.write(file)
-
-print(len(data))
+min_round = 11611000
+max_round = 16711000
+usdc = 31566704
+get_data(usdc, min_round, max_round)
