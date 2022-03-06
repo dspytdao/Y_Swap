@@ -9,12 +9,11 @@ Y_Swap has the prime objective to offer an Uniswap-like dapp for the Algorand Bl
 * PyTeal
 * [Algosigner](https://www.purestake.com/technology/algosigner/)
 
-### `Repo Structure`
+### Repo Structure
 
-```
-|__ Algorand_Solutions contains the Data Science Oriented tutorial for Developers Portal
 
-|__ frontend is the React.js interface to the contracts
+    ├── Algorand_Solutions      Data Science Oriented tutorial for Developers Portal
 
-|__ contracts contains PyTeal implementation of the Algorand Smart contracts and deployment scripts
-```
+    ├── frontend                React.js interface to the contracts
+
+    |__ contracts               PyTeal implementation of the Algorand Smart contracts and deployment scripts
