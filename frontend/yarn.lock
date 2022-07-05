@@ -408,10 +408,10 @@ algo-msgpack-with-bigint@^2.1.1:
   resolved "https://registry.yarnpkg.com/algo-msgpack-with-bigint/-/algo-msgpack-with-bigint-2.1.1.tgz#38bb717220525b3ff42232eefdcd9efb9ad405d6"
   integrity sha512-F1tGh056XczEaEAqu7s+hlZUDWwOBT70Eq0lfMpBP2YguSQVyxRbprLq5rELXKQOyOaixTWYhMeMQMzP0U5FoQ==
 
-algosdk@^1.17.0:
-  version "1.17.0"
-  resolved "https://registry.yarnpkg.com/algosdk/-/algosdk-1.17.0.tgz#fd61e6d97d976b007df9c26b864037a325481a34"
-  integrity sha512-WwHbZV03tZ2C/VLOapWOzJImm4lokav9HXnPLqbGrXyb8Gn/Q2AsoKMbOxd6MTzWguhaXU4Yk0VtbFlYhkaeoA==
+algosdk@^1.18.1:
+  version "1.18.1"
+  resolved "https://registry.yarnpkg.com/algosdk/-/algosdk-1.18.1.tgz#b9be65a713af98712f62f31188bf185c12972e28"
+  integrity sha512-P0mlSfMSbylMfUG2SZgxnhSE1JvQFIK4wT8O9ZvBvy1+pxs53MdAKfYkfC95cK3VqCvq616PuXM6bzI2mpQbPA==
   dependencies:
     algo-msgpack-with-bigint "^2.1.1"
     buffer "^6.0.2"
@@ -422,7 +422,6 @@ algosdk@^1.17.0:
     json-bigint "^1.0.0"
     superagent "^6.1.0"
     tweetnacl "^1.0.3"
-    url-parse "^1.5.1"
 
 ansi-styles@^3.2.1:
   version "3.2.1"
@@ -1197,11 +1196,6 @@ qs@^6.9.4:
   dependencies:
     side-channel "^1.0.4"
 
-querystringify@^2.1.1:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.2.0.tgz#3345941b4153cb9d082d8eee4cda2016a9aef7f6"
-  integrity sha512-FIqgj2EUvTa7R50u0rGsyTftzjYmv/a3hO345bZNrqabNqjtgiDMgmo4mkUjd+nzU5oF3dClKqFIPUKybUyqoQ==
-
 queue-microtask@^1.2.2:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
@@ -1279,11 +1273,6 @@ regenerator-runtime@^0.13.4:
   version "0.13.9"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz#8925742a98ffd90814988d7566ad30ca3b263b52"
   integrity sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==
-
-requires-port@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
-  integrity sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=
 
 resolve@^1.1.7, resolve@^1.22.0:
   version "1.22.0"
@@ -1454,14 +1443,6 @@ tweetnacl@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-1.0.3.tgz#ac0af71680458d8a6378d0d0d050ab1407d35596"
   integrity sha512-6rt+RN7aOi1nGMyC4Xa5DdYiukl2UWCbcJft7YhxReBGQD7OAM8Pbxw6YMo4r2diNEA8FEmu32YOn9rhaiE5yw==
-
-url-parse@^1.5.1:
-  version "1.5.4"
-  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.5.4.tgz#e4f645a7e2a0852cc8a66b14b292a3e9a11a97fd"
-  integrity sha512-ITeAByWWoqutFClc/lRZnFplgXgEZr3WJ6XngMM/N9DMIm4K8zXPCZ1Jdu0rERwO84w1WC5wkle2ubwTA4NTBg==
-  dependencies:
-    querystringify "^2.1.1"
-    requires-port "^1.0.0"
 
 util-deprecate@^1.0.1, util-deprecate@^1.0.2:
   version "1.0.2"
