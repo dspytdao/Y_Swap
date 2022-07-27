@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@rollup/plugin-inject": "^4.0.4",
-    "algosdk": "^1.18.1",
+    "algosdk": "^1.19.0",
     "buffer": "^6.0.3",
     "framer-motion": "^6.4.1",
     "path-browserify": "^1.0.1",
