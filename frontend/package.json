@@ -7,7 +7,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@rollup/plugin-inject": "^4.0.4",
+    "@rollup/plugin-inject": "^5.0.2",
     "algosdk": "^1.22.0",
     "buffer": "^6.0.3",
     "framer-motion": "^7.6.4",
