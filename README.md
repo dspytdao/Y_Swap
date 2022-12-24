@@ -1,16 +1,16 @@
 # Y_Swap
 
-### `Project Objective:`
+## `Project Objective:`
 
 Y_Swap has the prime objective to offer an Uniswap-like dapp for the Algorand Blockchain
 
-### `Tech Stack`
-* React.js
-* PyTeal
-* [Algosigner](https://www.purestake.com/technology/algosigner/)
+## `Tech Stack`
+
+- React.js
+- PyTeal
+- [Algosigner](https://www.purestake.com/technology/algosigner/)
 
 ### Repo Structure
-
 
     ├── Algorand_Solutions      Data Science Oriented tutorial for Developers Portal
 
